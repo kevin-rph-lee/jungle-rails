@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
+      session[:user_email] = @user.email
       redirect_to [:root], notice: 'User created!'
     else
       render :new
