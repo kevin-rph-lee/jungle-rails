@@ -29,6 +29,26 @@
         <li class="register-button">
           <%= link_to 'Register', [:new, :user] %>
         </li>
+
+
+
+        <% if session[:user_id] == nil %>
+          <li class="register-button">
+            <%= link_to 'Login', [:new, :session] %>
+          </li>
+        <% end %>
+
+
+        <% if session[:user_id] != nil %>
+          <li class="register-button">
+            <%= link_to 'Logout', '/logout' %>
+          </li>
+        <% end %>
+
+        <span>
+          Logged in as: <%= session[:user_id] %>
+        </span>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
