@@ -1,0 +1,7 @@
+ id | total_cents |         created_at         |         updated_at         |      stripe_charge_id       |       email       
+----+-------------+----------------------------+----------------------------+-----------------------------+-------------------
+  1 |       98765 | 2017-12-07 21:57:54.827755 | 2017-12-07 21:57:54.827755 | ch_1BWXNOLNeGYLqn9Rz4dgilhz | kvirani@gmail.com
+  2 |      610400 | 2017-12-07 23:04:58.02502  | 2017-12-07 23:04:58.02502  | ch_1BWYQHLNeGYLqn9RHREaHTkx | kvirani@gmail.com
+  3 |       19049 | 2017-12-07 23:05:57.246981 | 2017-12-07 23:05:57.246981 | ch_1BWYRELNeGYLqn9RILsQ4yzZ | kvirani@gmail.com
+(3 rows)
+
