@@ -11,17 +11,18 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th colspan="2">Product</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Qty Remaining</th>
         <th></th>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Qty</th>
+        <th>Total Price</th>
       </tr>
     </thead>
     <tbody>
       <%= render @line_items %>
     </tbody>
   </table>
+  <h1>Final amount paid: $ <%=get_final_amount(@line_items) %></h1>
 
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>

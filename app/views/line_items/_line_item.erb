@@ -1,11 +1,17 @@
 <tr>
   <td>
+    <%= image_tag get_product(line_item.product_id).image.tiny %>
+  </td>
+  <td>
+    <%= get_product(line_item.product_id).name %>
+  </td>
+  <td>
+    <%= get_product(line_item.product_id).description %>
+  </td>
+  <td>
     <%= line_item.quantity %>
   </td>
-  <td>
-    <%= line_item.name %>
-  </td>
-  <td>
-    <%= line_item.description %>
+    <td>
+    $ <%= line_item.total_price_cents / 100 %>
   </td>
 </tr>
