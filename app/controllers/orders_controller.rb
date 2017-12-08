@@ -3,8 +3,7 @@ class OrdersController < ApplicationController
   def show
     id = params[:id]
     @order = Order.find(id)
-    @line_items = LineItem.where(order_id: id).joins("INNER JOIN products ON line_items.product_id = products.id")
-
+    @line_items = LineItem.where(order_id: id)
 
     @products = Product.all.order(created_at: :desc)
 
@@ -16,7 +15,7 @@ class OrdersController < ApplicationController
 
     if order.valid?
       empty_cart!
-      OrderMailer.receipt_email(session[:user_email]).deliver_later
+      OrderMailer.receipt_email(session[:user_email], order).deliver_later
 
       redirect_to order, notice: 'Your Order has been placed.'
     else

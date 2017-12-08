@@ -1,1 +1,4 @@
-<p>test</p>
+<p>Order ID: <%= @order.id%></p>
+<% @line_items.each do |line_item| %>
+   <p><%= line_item.quantity %></p>
+<% end %>
